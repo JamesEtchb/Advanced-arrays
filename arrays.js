@@ -36,9 +36,46 @@ let teachers = [
 // const bobby = studentNames.find((student) => student === 'James')
 // console.log(bobby)
 
-const someBobby = studentNames.some(student => student == 'James')
-console.log('Some bobby?', someBobby)
+//.some()
+// const someBobby = studentNames.some((student) => student == 'James')
+// console.log('Some bobby?', someBobby)
 
+//.every()
+// const everyBobby = studentNames.every((student) => student == 'James')
+// console.log('Eveeryones bobby?', everyBobby)
 
-const everyBobby = studentNames.every(student => student == 'James')
-console.log('Eveeryones bobby?', everyBobby)
+//.forEach()
+// studentNames.forEach((student) => {
+//   console.log(student)
+// })
+
+// const justTheNames = teachers.map(teacher => {
+//     return teacher.name
+// })
+
+// console.log(justTheNames)
+
+//.reduce()
+let numbers = [10, 20, 30, 40, 50, 60, 70,80]
+
+let totals = numbers.reduce((accumulator, currentValue, index, array) => {
+  return accumulator + currentValue
+}, 0)
+
+console.log(totals)
+
+//this is basically writing out .reduce()
+// let total = 0
+// for (let i = 0; i < numbers.length; i++) {
+//   total += numbers[i]
+// }
+
+//this is how you could use index
+total = numbers.reduce((total, currentNumber, index) => {
+  if (index < 5) {
+    return total + currentNumber
+  } else{
+    return total
+  }
+}, 0)
+console.log(total)
